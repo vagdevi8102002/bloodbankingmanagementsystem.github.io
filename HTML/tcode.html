@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>REQUEST BLOOD</title>
+        <link href="tstyles.css" rel="stylesheet" type="text/css">
+      </head>
+        <body>
+            <div class="Rblood">
+                <h1>REQUEST FOR BLOOD</h1>
+            </div>
+            <div class="main">
+            <div class="content">
+
+            <form method="post">
+                    <div class="user_text">
+                        <div class="input_text">
+                            <label>Patient Name: </label>
+                            <input type="text" placeholder="Enter the patient name" id="PatientName" name="PatientName">
+                        </div>
+
+                        <div class="input_text">
+                            <div class="Cname">
+                                <label>Contact Name: </label>
+                                <input type="text" placeholder="Enter the contact name" id="ContactName" name="ContactName">
+                            </div>
+                        </div>
+
+                        <div class="input_text">
+                            <label>Phone Number: </label>
+                            <input type="phone" placeholder="Enter your phone number" id="PhoneNumber" name="PhoneNumber">
+                        </div>
+
+                        <div class="input_text">
+                            <div class="EID">
+                                <label>Email id: </label>
+                                <input type="email" placeholder="Enter your email id" id="Emailid" name="Emailid">
+                            </div>
+                        </div>
+
+                        <div class="input_text">
+                            <label>Blood Group: </label>
+                            <select class="select" id="BloodGroup" name="BloodGroup">
+                                <option>Select Blood Group</option>
+                                <option>A+</option>
+                                <option>B+</option>
+                                <option>AB+</option>
+                                <option>O+</option>
+                                <option>A-</option>
+                                <option>B-</option>
+                                <option>AB-</option>
+                                <option>O-</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input_text">
+                            <div class="rdate">
+                                <label>Required Date: </label>
+                                <input type="date" id="RequiredDate" name="RequiredDate">
+                            </div>
+                        </div>
+
+
+                        <div class="input_text">
+                            <label>City: </label>
+                            <input type="City" placeholder="Enter your city" id="City" name="City">
+                        </div>
+
+                        <div class="input_text">
+                            <div class="docname">
+                                <label>Doctor Name: </label>
+                                <input type="Doctor Name" placeholder="Enter the doctor name" id="DoctorName" name="DoctorName">
+                            </div>
+                        </div>
+                        <div class="input_txt">
+                            <label> Gender: </label>
+                            <input type="radio" name="Gender" value="Male" required>Male
+                            <input type="radio" name="Gender" value="Female" required>Female
+                            <input type="radio" name="Gender" value="Other" required>Other
+                        </div>
+
+                        <div class="input_text">
+                            <div class="hdetails">
+                            <label>Hospital Details: </label>
+                            <textarea rows="3" cols="50" placeholder="Hospital Details" id="HospitalDetails" name="HospitalDetails"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="input_text">
+                            <div class="comnt">
+                            <label>Comments: </label>
+                            <textarea rows="3" cols="50" placeholder="Comments.." id="Comments" name="Comments"></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="sub">
+                          <input type="submit" onclick="openPopup()" value="Submit" name="submit" id="submit">
+                        </div>
+                    </div>
+            </form>
+            </div>
+            </div>
+            <div class="popup" id="popup">
+              <img src="tick.png" alt="">
+              <h2>Thank you!</h2>
+              <p>Your details have been successfully submitted.Thank you!</p>
+              <button type="button" name="button" onclick="closePopup()">OK</button>
+            </div>
+        </body>
+        <script type="text/javascript">
+          let popup = document.getElementById("popup");
+          function openPopup()
+          {
+              popup.classList.add("open-popup");
+          }
+          function closePopup()
+          {
+            popup.classList.remove("open-popup");
+          }
+        </script>
+        <script src="jquery-3.6.0.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+        document.querySelector('#submit').addEventListener('click',(e)=>{
+        e.preventDefault();
+          $.ajax({
+            type: 'post',
+            url: 'tcode.php',
+            data: $('form').serialize(),
+
+            success: function (response){
+                console.log(response);
+              }
+          })
+        })
+
+        </script>
+</html>

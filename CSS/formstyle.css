@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&family=Roboto:wght@700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+body
+{
+	background: #fff;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	background-image: url('become donor.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	backdrop-filter: blur(5px);
+}
+.donor{
+	position:absolute;
+	margin-left: 1075px;
+	margin-top: 30px;
+	height:30px;
+	background-color: #ED1B24;
+	color: white;
+	border-radius: 6px;
+	font-weight: bold;
+	text-align: center;
+  }
+  .donor:hover{
+	background-color: black;
+  }
+  .donor:active {
+	background-color: green;
+  }
+  /****************************************************/
+  .logo{
+	display: inline-block;
+	margin-top: 20px;
+  }
+  /***************************************************/
+  .top{
+	height:25px;
+	background-color:red;
+  }
+  /****************************************************/
+  .bottom{
+	height:25px;
+	background-color:red;
+	margin-top: 17px;
+  }
+  /****************************************************/
+  .options{
+	margin-left: 75px;
+  }
+  button {
+	margin-left: 60px;
+	margin-top: 80px;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #ED1B24;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 15px;
+	width: 150px;
+	height:30px;
+  }
+
+  .button1 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+
+  .button1 span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+  }
+
+  .button1:hover span {
+	padding-right: 25px;
+  }
+
+  .button1:hover span:after {
+	opacity: 1;
+	right: 0;
+  }
+  .button1:hover{
+	background-color: black;
+  }
+  a{
+	color:white;
+	text-decoration: none;
+  }
+  .after_options{
+	height:25px;
+	background-color:red;
+	margin-top: 90px;
+  }
+.title
+{
+
+    background: #ed1b24;
+    font-size: 30px;
+    color: #fff;
+	text-transform: uppercase;
+    font-weight: 700;
+	letter-spacing: 5px;
+    line-height: 24px;
+    padding: 30px;
+    text-align: center;
+}
+.main
+{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.register
+{
+    background: #f2f2f2;
+    padding: 25px;
+	border-radius: 10px;
+	width: 800px;
+
+}
+.main
+{
+    margin-top: -5px;
+	margin-bottom: 10px;
+}
+.main .doner_text
+{
+	display:flex ;
+	flex-wrap: wrap;
+	width: calc(100% / 2 - 20px);
+	align-content: space-between;
+}
+.main .doner_text label
+{
+    display: block;
+	margin-bottom: 3px;
+	color: #9597a6;
+}
+.main .select
+{
+	height: 45px;
+	width: 350px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+}
+.main .doner_text input[type="text"]
+{
+	height: 45px;
+	width: 350px;
+	padding: 10px 20px;
+	border: #9597a6;
+	border-radius: 10px;
+}
+.DOB
+{
+	height: 45px;
+	width: 300px;
+	margin: -65px 0px;
+	padding: 0px 400px;
+}
+.BG
+{
+	padding: 20px 0px;
+}
+.adds
+{
+	margin: -85px 400px;
+}
+.email
+{
+	margin: -65px 400px;
+}
+.gender
+{
+	padding: 10px 0px 0px 0px;
+}
+
+.ci
+{
+	margin: 20px 0px;
+}
+.state
+{
+	margin: -85px 400px;
+}
+.main .doner_text input[type="date"]
+{
+	height: 45px;
+	width: 350px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+}
+.main input[type="text"]
+
+{
+	width: 100%;
+	border-radius: 3px;
+	padding: 10px;
+}
+form .sub
+{
+	height: 45px;
+	margin: 10px 0;
+}
+form .sub input
+{
+	height: 100%;
+	width: 300px;
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+	background: #ed1b24;
+}
+.sub
+{
+	padding: 0px 160px 0px 230px;
+}
+
+.btn{
+  padding: 10px 60px;
+  background:#fff;
+  border:0;
+  outline:none;
+  cursor:pointer;
+  font-size:22px;
+  font-weight:500;
+  border-radius:30px;
+}
+.popup{
+  width:400px;
+  background:#fff;
+  border-radius: 6px;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align:center;
+  padding:0 30px 30px;
+  color:#333;
+  visibility: hidden;
+  transition: transform 10s, top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top:50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+.popup img{
+  width:100px;
+  margin-top:-50px;
+  border-radius: 50%;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+.popup h2
+{
+  font-size:38px;
+  font-weight:500;
+  margin:30px 0 10px;
+}
+.popup button{
+  width:100%;
+  margin-top:50px;
+  padding: 10px 0;
+  background:#6fd649;
+  color:#fff;
+  border:0;
+  outline:none;
+  font-size:18px;
+  border-radius: 4px;
+  cursor:pointer:
+  box-shadow:0 5px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 377px )and (min-width: 366px)
+{
+
+	.body
+	{
+		background-image: url('become\ donor.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		backdrop-filter: blur(5px);
+	}
+	.title
+	{
+		width: 600px;
+	}
+	.register
+	{
+		margin-top: 50px;
+		margin-left: 200px;
+		padding-bottom: -20px;
+		width: 2000px;
+		height: 150vh
+
+	}
+
+	.main
+	{
+		padding-bottom: 10px;
+	}
+	.DOB
+	{
+		margin: 20px -400px
+	}
+	.BG
+	{
+		padding: 30px 0px;
+	}
+	.adds
+	{
+		margin: -15px 0px 30px 0px;
+	}
+	.email
+	{
+		margin: 30px 0px;
+	}
+	.ci
+	{
+		margin: -10px 0px;
+	}
+	.state
+	{
+		margin: 30px 0px 30px 0px;
+	}
+	.sub input[type="submit"]
+	{
+		width:200px
+	}
+	.sub
+	{
+		padding: 0px 80px 0px;
+
+	}
+
+
+}
+@media screen and (max-width: 365px )
+{
+
+
+	.title
+	{
+		width: 600px;
+	}
+	.register
+	{
+		margin-top: 50px;
+		margin-left: 200px;
+		padding-bottom: -20px;
+		width: 2000px;
+		height: 140vh
+
+	}
+
+	.main
+	{
+		padding-bottom: 10px;
+	}
+	.DOB
+	{
+		margin: 20px -400px
+	}
+	.BG
+	{
+		padding: 30px 0px;
+	}
+	.adds
+	{
+		margin: -15px 0px 30px 0px;
+	}
+	.email
+	{
+		margin: 30px 0px;
+	}
+	.ci
+	{
+		margin: -10px 0px;
+	}
+	.state
+	{
+		margin: 30px 0px 30px 0px;
+	}
+	.sub input[type="submit"]
+	{
+		width:200px
+	}
+	.sub
+	{
+		padding: 0px 80px 0px;
+
+	}
+
+
+}
+@media screen and (max-width: 395px ) and (min-width: 385px)
+{
+
+	.body
+	{
+		background-image: url('become\ donor.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		backdrop-filter: blur(5px);
+	}
+	.title
+	{
+		width: 600px;
+	}
+	.register
+	{
+		margin-top: 50px;
+		margin-left: 200px;
+		padding-bottom: -20px;
+		width: 2000px;
+		height: 120vh
+
+	}
+
+	.main
+	{
+		padding-bottom: 10px;
+	}
+	.DOB
+	{
+		margin: 20px -400px
+	}
+	.BG
+	{
+		padding: 30px 0px;
+	}
+	.adds
+	{
+		margin: -15px 0px 30px 0px;
+	}
+	.email
+	{
+		margin: 30px 0px;
+	}
+	.ci
+	{
+		margin: -10px 0px;
+	}
+	.state
+	{
+		margin: 30px 0px 30px 0px;
+	}
+	.sub input[type="submit"]
+	{
+		width:200px
+	}
+	.sub
+	{
+		padding: 0px 80px 0px;
+
+	}
+
+
+}
+
+@media screen and (max-width: 280px)
+{
+
+	.title
+	{
+		width: 600px;
+	}
+	.register
+	{
+		margin-top: 50px;
+		margin-left: 200px;
+		margin-bottom: -200px;
+		width: 2000px;
+		height: 140vh
+
+	}
+
+	.main
+	{
+		padding-bottom: -100px;
+		padding-left: 100px;
+	}
+	.DOB
+	{
+		margin: 10px -400px
+	}
+	.adds
+	{
+		margin: -5px 0px 10px 0px;
+	}
+	.email
+	{
+		margin: 10px 0px;
+	}
+	.ci
+	{
+		margin: -5px 0px;
+	}
+	.state
+	{
+		margin: 15px 0px 30px 0px;
+	}
+	.aadhar
+	{
+		margin: -5px 0px;
+	}
+	.sub input[type="submit"]
+	{
+		width:200px
+	}
+	.sub
+	{
+		padding: 0px 80px 0px;
+
+	}
+
+}
+@media screen and (max-width: 500px ) and (min-width: 398px)
+{
+
+
+	.title
+	{
+		width: 600px;
+	}
+	.register
+	{
+		margin-top: 50px;
+		margin-left: 200px;
+		padding-bottom: -20px;
+		width: 2000px;
+		height: 110vh
+
+	}
+
+	.main
+	{
+		padding-bottom: -100px;
+	}
+	.DOB
+	{
+		margin: 20px -400px
+	}
+	.BG
+	{
+		padding: 30px 0px;
+	}
+	.adds
+	{
+		margin: -15px 0px 30px 0px;
+	}
+	.email
+	{
+		margin: 30px 0px;
+	}
+	.ci
+	{
+		margin: -10px 0px;
+	}
+	.state
+	{
+		margin: 30px 0px 30px 0px;
+	}
+	.sub input[type="submit"]
+	{
+		width:200px
+	}
+	.sub
+	{
+		padding: 0px 80px 0px;
+
+	}
+
+
+}
+@media screen and (max-width: 830px ) and (min-width: 800px)
+{
+
+	.title
+	{
+		width: 855px;
+	}
+	.register
+	{
+
+		margin-left: 35px;
+	}
+}
+@media screen and (max-width: 770px ) and (min-width: 760px)
+{
+
+	.title
+	{
+		width: 855px;
+	}
+	.register
+	{
+
+		margin-left: 90px;
+	}
+}
